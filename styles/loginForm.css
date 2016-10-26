@@ -1,0 +1,116 @@
+.panel-body .row, .panel-heading .row{
+	margin-left: 0px;
+}
+.panel-heading {
+	color: #00415d;
+	background-color: rgba(44, 73, 156, 0.88);
+	text-align:center;
+}
+.panel-heading div.row>div+div{
+	border-left: 1px solid #fff;
+}
+.panel-heading a{
+	text-decoration: none;
+	color: #999999;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-heading a.active{
+	color: #f89406;
+	font-size: 18px;
+}
+.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+
+.panel-body form#login-form, form#register-form{
+	margin-left: 2%;
+    margin-right: 2%;
+	width: 96%;
+}
+.panel-body form#login-form  div[class*="col-"],.panel-body form#register-form  div[class*="col-"]{
+	padding: 0px !important;
+	margin-right: 2% !important;
+}
+.panel-body label{
+    display: inline-block !important;
+	font-weight: 700 !important;
+	margin-bottom: 5px !important;
+	
+}
+.panel-body input[type="submit"]{
+	width: 100%;
+}
+.panel-body input[type="radio"], input[type="checkbox"]{
+	margin: 0px !important;
+}
+.panel-body input[type="text"],.panel-body input[type="email"],.panel-body input[type="password"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-body input:hover,
+.panel-body input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+.rememberMe,.forgotPsw{
+	outline: none;
+	color: #000;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+
+}
+.btn-login,.btn-register {
+	background-color: #59B2E0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+	background-image: none !important;
+}
+.btn-login:hover,
+.btn-login:focus,.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+.forgot-password {
+	text-decoration: underline;
+	color: #000;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+.danger{
+	color: red;
+	font-size: 1.3em;
+}

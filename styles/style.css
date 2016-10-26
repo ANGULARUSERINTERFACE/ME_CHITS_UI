@@ -1,0 +1,47 @@
+body{
+	width: 100%;
+	height: 100%;
+}
+a{
+	cursor:pointer; 
+}
+.modal {
+	display: block;
+	height: auto;
+	max-height: 60%;
+	overflow-y: auto;
+	max-width: 50%;
+	width: auto;
+}
+.modal-body:before,
+.modal-body:after {
+    display: table;
+    content: " ";
+}
+.modal-header:before,
+.modal-header:after {
+    display: table;
+    content: " ";
+}
+
+@media screen and (max-width: 767px){
+	.modal{
+		left: 20%;
+		right: 20%;
+	}
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){
+	.modal{
+		max-width: 70%;
+	}
+}
+@media screen and (max-width: 979px){
+	.navbar-fixed-top, .navbar-fixed-bottom{
+		position: fixed;
+	}
+}
+.mainContainer{
+	margin: 0 2%;
+	margin-top: 60px;
+	width: 96%;
+}

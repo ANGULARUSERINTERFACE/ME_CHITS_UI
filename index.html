@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content=""/>
+<meta name="author" content=""/>
+
+<title>ME CHIT FUNDS</title>
+
+<!--BootStrap CSS Declaration-->
+<link href="libs/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="libs/bootstrap-combined.min.css" rel="stylesheet" type="text/css"/>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="libs/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<script src="libs/ie-emulation-modes-warning.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="libs/ie10-viewport-bug-workaround.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="libs/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- JQUERY Javascript -->
+<script src="libs/jquery.min.js"></script>
+<!-- Bootstrap Javascript -->
+<script src="libs/bootstrap.min.js"></script>
+<!-- Angular & its Route Javascript -->
+<script src="libs/angular.js"></script>
+<script src="libs/angular-route.js"></script>
+<script src="libs/ui-bootstrap-tpls-0.7.0.js"></script>
+
+<!--Customized CSS-->
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="loginForm.css" rel="stylesheet" type="text/css"/>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+<!--Fixed Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">ME CHITS&nbsp;</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right" ng-controller="loginFormController">
+				<li class="active"><a id="loginButton" ng-click="showLogin()" data-toggle="modal" data-target="#loginForm">Login</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div id="main" class="mainContainer">
+	<div ng-view></div>
+</div>
+
+</body>
+
+</html>
