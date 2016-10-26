@@ -19,12 +19,17 @@
 					<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" ng-focus="removeAlert()">
 				</div>
 				<div class="form-group">
-					<select class="form-control" name="size" id="userRole" ng-focus="removeAlert()">
-						<option value="">---- I am a ----</option>
-						<option value="a">Admin</option>
-						<option value="c">Customer</option>
-						<option value="e">Employee</option>
-					</select>
+					<div class="btn-group" data-toggle="buttons" ng-focus="removeAlert()" id="userRole" data-toggle="buttons">
+						<label class="btn btn-default active">
+							<input name="userRole" value="customer" type="radio">Customer
+						</label>
+						<label class="btn btn-default">
+							<input name="userRole" value="emp" type="radio">Employee
+						</label>
+						<label class="btn btn-default">
+							<input name="userRole" value="admin" type="radio">Admin
+						</label>
+					</div>
 				</div>
 				<div class="form-group">
 					<div class="row">
@@ -63,13 +68,6 @@
 				</div>
 				<div class="form-group">
 					<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-				</div>
-				<div class="form-group">
-					<select class="form-control" name="size" id="userRole">
-						<option value="">---- I am a ----</option>
-						<option value="c">Customer</option>
-						<option value="e">Employee</option>
-					</select>
 				</div>
 				<div class="form-group">
 					<div class="row">

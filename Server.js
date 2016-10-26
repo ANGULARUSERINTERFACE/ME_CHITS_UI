@@ -34,7 +34,7 @@ app.post('/processLogin',function(req,res){
 	var uN = req.body.userName;
 	var pw = req.body.passWord;
 	var role = req.body.userRole;
-	if(role == 'a'){
+	if(role == 'admin'){
 		connection.query("SELECT * from admin_user_master WHERE userName='" + uN + "' and password='" + pw + "'",function(err,rows){
 			if(err) {
 				console.log("Problem with MySQL"+err);

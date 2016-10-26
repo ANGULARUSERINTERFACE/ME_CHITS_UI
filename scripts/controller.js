@@ -38,21 +38,24 @@ var loginController = function($scope,$modalInstance,$modal,$http,$location){
 		$('#register-form-link').addClass('active');
 	}
 	$scope.loginProcessController = function(){
-		
+		var userRoleValue = 'customer';
+		if($('input[name=userRole]:checked').val() == undefined){
+			userRoleValue = 'customer';
+		}
+		else{
+			userRoleValue = $('input[name=userRole]:checked').val();
+		}
 		if($('#username').val() == ''){
 			$('#alert').html('Please enter the User Name!!!');
 		}
 		else if($('#password').val() == ''){
 			$('#alert').html('Please enter the Password!!!');
 		}
-		else if($('#userRole').val() == ''){
-			$('#alert').html('Please select Your Role');
-		}
 		else{
 			var data = {
 				userName: $('#username').val(),
 				passWord: $('#password').val(),
-				userRole: $('#userRole').val()
+				userRole: userRoleValue
 			}
 			$http({
 				url: '/processLogin', // No need of IP address
@@ -66,6 +69,7 @@ var loginController = function($scope,$modalInstance,$modal,$http,$location){
 				else{
 					$('.panel-heading').parent().remove();
 					$('.modal-backdrop').remove();
+					alert($location.$$absUrl);
 					$location.path('/adminPage');
 				}
 			});
